@@ -1,21 +1,28 @@
+@import url('http://fonts.googleapis.com/css?family=Montserrat:400,700');
+
 html {
     position: relative;
     min-height: 100%;
+    font-family: 'Montserrat', 'Proxima Nova', sans-serif !important;
 }
 
 body {
-    font-family: 'Lato', 'Proxima Nova', sans-serif !important;
+    font-family: 'Montserrat', 'Proxima Nova', sans-serif !important;
     background-color: #f7f7f7;
     margin-bottom: 20px;
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: 'Lato', 'Proxima Nova', sans-serif !important;
+    font-family: 'Montserrat', 'Proxima Nova', sans-serif !important;
     margin: 0;
     padding: 0;
 }
 
+.brickwall { background-image: url("../images/brickwall.png"); }
+
 .center { text-align: center; }
+.pad40 { padding: 40px 0; }
+.pad10bot { padding-bottom: 10px; }
 
 .hab-navbar {
     .navbar-brand, .navbar-nav li a {
@@ -25,12 +32,11 @@ h1, h2, h3, h4, h5 {
     }
 
     .navbar-brand {
-      font-weight: bold !important;
+        font-weight: bold !important;
     }
 
     background-color: #ffffff;
     border-bottom: 1px solid #ccc;
-    margin-bottom: 20px;
 
     a {
         color: #555555;
@@ -46,26 +52,62 @@ h1, h2, h3, h4, h5 {
 }
 
 #index {
-  h1 {
-    text-align: center;
-    font-size: 3em;
-
-    &.huge {
-      font-size: 4em !important;
+    h1.huge {
+        font-weight: bold;
+        font-size: 3.5em !important;
     }
-  }
 
-  .hab-blue {
-    padding: 20px 0 0 0;
-    background-color: #CEE3F8;
-    border-bottom: 1px solid #5F99CF;
-    border-top: 1px solid #5F99CF;
-    td { border-color: #444; }
-  }
+    .hab-blue {
+        padding: 20px 0;
+        background-color: #CEE3F8;
+        border-top: 1px solid #5F99CF;
+        text-align: center;
+        span { color: #666; }
+    }
 
-  p {
-    color: #666666;
-  }
+    p {
+        color: #666666;
+    }
+
+    .club {
+        background-color: #f6f4ef;
+        color: #333333;
+
+        .club-bg {
+            background: #f6f4ef url('../images/something.jpg') no-repeat !important;
+            background-position: right center !important;
+            padding: 100px 0;
+        }
+
+        p {
+            color: #666666;
+            font-size: 17px;
+        }
+    }
+
+    .mapview {
+        background-color: #00395a;
+        padding-top: 100px;
+        margin-bottom: 10px;
+        color: #f8f8f8;
+
+        p {
+            color: #bbbbbb;
+            font-size: 17px;
+        }
+    }
+
+    .tank {
+        background: transparent url('../images/tank.jpg') no-repeat !important;
+        background-position: center center !important;
+        padding: 100px;
+        color: #f8f8f8;
+
+        p {
+            color: #bbbbbb;
+            font-size: 17px;
+        }
+    }
 }
 
 footer {
