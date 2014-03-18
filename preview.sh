@@ -7,4 +7,5 @@ if [ ! -f "$cwd/dist/build/habpsite/habpsite" ]; then
   exit 1
 fi
 
+"$cwd/dist/build/habpsite/habpsite" clean
 "$cwd/dist/build/habpsite/habpsite" watch
