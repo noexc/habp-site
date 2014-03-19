@@ -30,3 +30,7 @@ main = do
         getResourceBody
           >>= loadAndApplyTemplate "templates/default.html" ctx
           >>= relativizeUrls
+
+    match "robots.txt" $ do
+      route idRoute
+      compile copyFileCompiler
