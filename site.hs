@@ -10,12 +10,16 @@ main = do
   hakyll $ do
     let ts' = show ts -- Do this once so miliseconds don't ever change.
 
-    match "images/*" $ do
+    match "images/**" $ do
       route   idRoute
       compile copyFileCompiler
 
-    match "css/*" $ do
+    match "css/*.less" $ do
       route $ setExtension (ts' ++ ".less")
+      compile compressCssCompiler
+
+    match "css/*.css" $ do
+      route $ setExtension (ts' ++ ".css")
       compile compressCssCompiler
 
     match "templates/*" $ compile templateCompiler

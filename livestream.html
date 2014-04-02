@@ -1,0 +1,98 @@
+---
+title: Live Stream
+---
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jplayer/2.5.4/jquery.jplayer.min.js"></script>
+
+<div id="index">
+  <!-- pattern from http://subtlepatterns.com/ -->
+  <div class="pad40 brickwall">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1 class="huge center">Listen To Our Balloon Repeater</h1>
+          <h2 class="huge center">right from your browser.</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stream">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <h2 class="center">Want to listen from your browser?</h2>
+          <div id="player" class="jp-jplayer"></div>
+          <div id="jp_container_1" class="jp-audio">
+            <div class="jp-type-single">
+              <div class="jp-gui jp-interface">
+                <ul class="jp-controls">
+                  <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+                  <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+                  <li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
+                  <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+                  <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+                  <li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+                </ul>
+                <div class="jp-progress">
+                  <div class="jp-seek-bar">
+                    <div class="jp-play-bar"></div>
+                  </div>
+                </div>
+                <div class="jp-volume-bar">
+                  <div class="jp-volume-bar-value"></div>
+                </div>
+                <div class="jp-time-holder">
+                  <div class="jp-current-time"></div>
+                  <div class="jp-duration"></div>
+                  <ul class="jp-toggles">
+                    <li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
+                    <li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="jp-details">
+                <ul>
+                  <li><span class="jp-title"></span></li>
+                </ul>
+              </div>
+              <div class="jp-no-solution">
+                <span>Update Required</span>
+                To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+              </div>
+            </div>
+          </div>
+          <script>
+            $(function() {
+              $("#player").jPlayer({
+                ready: function (event) {
+                  $(this).jPlayer("setMedia", {
+                    title: "High Altitute Balloon Repeater Output Feed",
+                    oga: "http://mapview.w8upd.org:8080/repeater.ogg"
+                  });
+                },
+                swfPath: "//cdnjs.cloudflare.com/ajax/libs/jplayer/2.5.4/Jplayer.swf",
+                supplied: "oga",
+                wmode: "window",
+                smoothPlayBar: true,
+                keyEnabled: true,
+                remainingDuration: false,
+                toggleDuration: false
+              });
+            });
+          </script>
+        </div>
+        <div class="col-sm-6">
+          <h2 class="center">Prefer another player?</h2>
+          <p>
+            The stream URL is
+            <a href="http://mapview.w8upd.org:8080/repeater.ogg">
+              http://mapview.w8upd.org:8080/repeater.ogg
+            </a>. You can paste this into any player that supports OGG (such as
+            VLC) and listen in the player of your choice.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
