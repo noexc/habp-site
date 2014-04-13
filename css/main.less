@@ -59,21 +59,19 @@ h1, h2, h3, h4, h5 {
     vertical-align: middle;
 }
 
-#index {
-    h1.huge {
-        font-weight: bold;
-        font-size: 3.5em !important;
-    }
+h1.huge {
+    font-weight: bold;
+    font-size: 3.5em !important;
+}
 
+p { color: #666666; }
+
+#index {
     .hab-blue {
         padding: 20px 0;
         background-color: #CEE3F8;
         text-align: center;
         span { color: #666; }
-    }
-
-    p {
-        color: #666666;
     }
 
     .club {
@@ -124,22 +122,3 @@ footer {
     padding: 20px 0;
     text-align: center;
 }
-
-/**
- * This roughly implements the GitHub color theme for highglighting-kate.
- * It is not exact, because the GitHub theme is *way* more complex than what
- * highlighting-kate is capable of highlighting, but for blogging about code
- * snippets, etc, it should be fine.
- *
- * -CodeBlock
- */
-code { font-family: Consolas, "Liberation Mono", Courier, monospace; }
-.kw { font-weight: bold; }
-.dt { color: #445588; font-weight: bold; }
-.dv { color: #009999; }
-.fl { color: #009999; }
-.ch { color: #dd1144; }
-.st { color: #dd1144; }
-.co { color: #999988; font-style: italic; }
-.fu { color: #990000; font-weight: bold; }
-.er { color: #a61717; background-color: #e3d2d2; }
