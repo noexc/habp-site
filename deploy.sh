@@ -9,4 +9,4 @@ fi
 
 rm -rf "$cwd/_site/" "$cwd/_cache/"
 
-"$cwd/dist/build/habpsite/habpsite" build && rsync -Havzre 'ssh' --delete _site/ w8upd.org:/srv/www/habp.w8upd.org/
+"$cwd/dist/build/habpsite/habpsite" build && rsync -Havzre 'ssh' --delete _site/ origin.noexc.org:/srv/www/nbp.noexc.org/
